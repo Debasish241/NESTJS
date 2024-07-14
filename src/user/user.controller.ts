@@ -30,7 +30,7 @@ export class UserController {
   store(@Req() req: Request) {
     return this.userService.create(req);
   }
-  @Patch()
+  @Patch('/:userId')
   update(@Req() req: Request, @Param() param:{userId: number}) {
     return this.userService.update(req,param)
   }
